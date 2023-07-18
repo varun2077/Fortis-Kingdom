@@ -1,0 +1,482 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --text: #2C3A47;
+    --textb: #FFF;
+    --text2: #F97F51;
+    --text3: #EAB543;
+    --background: #25CCF7;
+    --background2: #1B9CFC;
+    --background3: #cfcfcf;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background3);
+    overflow-x: hidden;
+}
+/*-----------------------------HEADE STARD--------------------------------------*/
+header{
+    width: 100%;
+    height: 80px;
+    background-color: var(--background2);
+    padding: 10px 50px;
+    position: sticky;
+    display: flex;
+    z-index: 1000;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 5px 5px rgba(37, 37, 37, .5);
+}
+.logo{
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: var(--text);
+}
+.nev a{
+    text-decoration: none;
+    color: #FFF;
+    padding: 30px 15px;
+}
+.nev a:hover{
+    background-color: var(--background);
+}
+#button{
+    padding: 15px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #FFF;
+    font-size: 1rem;
+    font-weight: 600;
+    background: none;
+    color: #FFF;
+    text-decoration: none;
+}
+#button:hover{
+    color: black;
+    border: 2px solid black;
+    box-shadow: 0 0 3px 1px black;
+}
+.NEV_BTN{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    transition: all 1s linear;
+    cursor: pointer;
+}
+.NEV_BTN:active{
+    width: 10px;
+    height: 10px;
+}
+.bar{
+    width: 100%;
+    height: 3px;
+    border-radius: 15px;
+    background-color: #fff;
+} 
+/*-----------------------------HEADE END--------------------------------------*/
+/*-----------------------------SEARCH STARD--------------------------------------*/
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 350px;
+    background-image: url(../sorce/city2.jpg);
+    background-position: center;
+    background-size: cover;
+    /* background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .5)); */
+}
+.scontend{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #FFF;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, .5);
+    backdrop-filter: blur(3px);
+}
+.BTN_search{
+    display: inline-flex;
+}
+.BTN_search input{
+    outline: none;
+    width: 230px;
+    height: 35px;
+    padding: 5px;
+    border: 2px solid var(--background2);
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+}
+.SBTN{
+    width: 35px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    outline: none;
+    background-color: var(--background2);
+    color: #FFF;
+    cursor: pointer;
+}
+.search h1{
+    color: #FFF;
+    font-size: 2.5rem;
+    margin:  20px 0;
+}
+.poem{
+    color: var(--textb);
+    text-align: center;
+    padding: 20px 40px;
+    border-radius: 2px;
+}
+.poem p{
+    margin-top: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.poem p:nth-child(odd){
+    color: var(--background);
+}
+/*-----------------------------SEARCH END--------------------------------------*/
+/*-----------------------------container stard--------------------------------------*/
+.container{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.state{
+    position: relative;
+    margin: 20px 0;
+    width: 90vw;
+    min-height: 650px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, .2);
+}
+.district{
+    position: relative;
+    margin: 20px 0;
+    width: 90vw;
+    min-height: 650px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, .2);
+}
+.TuristPlace{
+    position: relative;
+    margin: 20px 0;
+    width: 90vw;
+    min-height: 650px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, .2);
+}
+:is(.state, .district, .TuristPlace) h2{
+    margin: 20px 10px;
+    color: var(--background2);
+}
+:is(.state, .district, .TuristPlace) p{
+    margin: 0 0 10px 5px;
+    text-indent: 20px;
+    max-width: 700px;
+}
+.placedetails{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 40px 20px;
+    overflow-x: scroll;
+    gap: 30px;
+    height: 400px;
+    width: auto;
+}
+.placeS{
+    width: 300px;
+    height: 380px;
+    border-radius: 20px;
+    background-color: var(--background3);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.placeS img{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px 20px 0 0 ;
+    opacity: .9;
+}
+.placeS img:hover{
+    opacity: 1;
+}
+.placeS h2{
+    font-size: 1.7rem;
+    color: black;
+}
+.MoreInfe{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    padding: 10px 15px;
+    width: 50%;
+    outline: none;
+    background: none;
+    border-radius: 45px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 2px solid black;
+    transition: all .3s linear;
+}
+.MoreInfe:hover{
+    border: 2px solid var(--background2);
+    color: var(--background2);
+    background-color: black;
+    box-shadow: 0 0 2px 1px var(--background2);
+}
+.placeD{
+    width: 300px;
+    height: 380px;
+    border-radius: 20px;
+    background-color: var(--background3);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.placeD img{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px 20px 0 0 ;
+    opacity: .9;
+}
+.placeD img:hover{
+    opacity: 1;
+}
+.placeD h2{
+    font-size: 1.7rem;
+    color: black;
+}
+.placeP{
+    width: 300px;
+    height: 380px;
+    border-radius: 20px;
+    background-color: var(--background3);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.placeP img{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px 20px 0 0 ;
+    opacity: .9;
+}
+.placeP img:hover{
+    opacity: 1;
+}
+.placeP h2{
+    font-size: 1.7rem;
+    color: black;
+}
+.btn{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0 20px 20px 20px;
+    padding: 10px 35px;
+    outline: none;
+    background: none;
+    border-radius: 45px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid black;
+    transition: all .2s linear
+}
+.btn:hover{
+    color: var(--background2);
+    border: 2px solid var(--background2);
+}
+.para{
+    color: black;
+    font-weight: 600;
+    width: 70%;
+    padding: 0 15px;
+}
+/*-----------------------------container END--------------------------------------*/
+/*-----------------------------DISCOVER STARD--------------------------------------*/
+.discover{
+    background-color: #FFF;
+    width: 90vw;
+    min-height: 80px;
+    border-radius: 15px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+.discover h2{
+    font-size: 1.6rem;
+    margin: 30px;
+}
+#dis{
+    text-decoration: none;
+    font-weight: 900;
+    color: #FFF;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: var(--background2);
+    margin: 10px;
+    transition: all .2s linear;
+}
+#dis:hover{
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, .6);
+}
+.countries{
+    width: 95%;
+    height: 270px;
+    overflow-x: hidden;
+    gap: 10px;
+    display: flex;
+    overflow: scroll;
+}
+.countries img{
+    width: 300px;
+    height: 250px;
+    opacity: .9;
+}
+.countries img:hover{
+    opacity: 1;
+}
+/*-----------------------------DISCOVER END--------------------------------------*/
+/*-----------------------------FOOTER STARD--------------------------------------*/
+footer{
+    width: 100vw;
+    min-height: 400px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #FFF;
+    font-size: 1rem;
+    background-color: rgb(37, 37, 37);
+}
+.fcontend{
+    width: 100vw;
+    min-height: 370px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.AboutAs{
+    min-height: 330px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.SocialMedia{
+    min-height: 330px;
+    width: 600px;
+}
+.fanger{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.fanger a{
+    display: inline-block;
+    text-decoration: none;
+    color: #FFF;
+    padding: 23px 44px;
+    margin-top: 20px;
+}
+.fanger a:hover{
+    background-color: black;
+    color: var(--background);
+}
+.fcontend p{
+    margin: auto;
+    text-align: center;
+}
+.media{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.media h1{
+    color: var(--background);
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+.media ul{
+    list-style: none;
+    margin: 20px 0;
+}
+.media ul li{
+    margin: 10px 0;
+}
+.flink li a{
+    text-decoration: none;
+    margin-left: 80px;
+    text-align: left;
+    color: #FFF;
+    font-size: 1.1rem;
+}
+.flink li a:hover{
+    color: var(--background2);
+}
+/*-----------------------------FOOTER END--------------------------------------*/
+/*-----------------------------900px display stard----------------------------*/
+@media (max-width:900px){
+    
+    .NEV_BTN{
+        display: flex;
+    }
+    .nev{
+        position: absolute;
+        left: 0;
+        top: 80px;
+        display: none;
+        flex-direction: column;
+        z-index: 100;
+        width: 80vw;
+        height: 100vh;
+        background-color: var(--background2)
+    }
+    .nev a{
+        padding: 25px 15px;
+
+    }
+    .nev.active{
+        display: flex;
+    }
+    header button{
+        position: relative;
+        right: -60px;
+    }
+}
+@media (max-width:400px){
+
+}
+
+/*-----------------------------900px display end--------------------------------------*/

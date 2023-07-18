@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --mtc: #2980b9;
+    --tc:#ecf0f1;
+    --bg: #7f8c8d;
+    --bg2: #bdc3c7;
+    --nbg:#25323f;
+    --ha: #1a222b;
+    --atc: #ffffff;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url(../sorce/456536.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+/*-----------------------------HEADE STARD--------------------------------------*/
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #1B9CFC;
+    padding: 10px 50px;
+    position: sticky;
+    display: flex;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    color:#2C3A47;
+}
+.nev{
+    z-index: 100;
+}
+.nev a{
+    text-decoration: none;
+    color: var(--tc);
+    padding: 30px 15px;
+}
+.nev a:hover{
+    background-color: #25CCF7;
+}
+.NEV_BTN{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    transition: all 1s linear;
+}
+.NEV_BTN:active{
+    width: 10px;
+    height: 10px;
+}
+.bar{
+    width: 100%;
+    height: 3px;
+    border-radius: 15px;
+    background-color: #fff;
+} 
+/*-----------------------------HEADE END--------------------------------------*/
+/*-----------------------------login stard------------------------------------*/
+.login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.LoginBox{
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 450px;
+    position: relative;
+    z-index: 10;
+    top: -30px;
+    border-radius: 15px;
+    border: 2px solid var(--bg2);
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, .7) ;
+}
+.form{
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.form h1{
+    color: #1B9CFC;
+    letter-spacing: 3px;
+    font-size: 2.6rem;
+    text-align: center;
+    pointer-events: none;
+    margin: 15px 0 5px 0;
+}
+.input_box{
+    margin-top: 50px;
+}
+.input{
+    margin-top: 15px;
+}
+.input input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 2px solid white;
+    padding-bottom: 3px;
+    font-size: 1rem;
+}
+.input label{
+    position: relative;
+    top: -30px;
+    user-select: none;
+    color: #fff;
+    pointer-events: none;
+}
+.input input:focus ~ label,
+.input input:valid ~ label{
+    top: -50px;
+}
+form a{
+    text-decoration: none;
+    color: var(--atc);
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+form a:hover{
+    color: #1B9CFC;
+    text-decoration: underline;
+}
+form button{
+    border: none;
+    outline: none;
+    border-radius: 45px;
+    width: 100%;
+    height: 35px;
+    margin: 15px;
+    background-color:#1B9CFC;
+    color: var(--atc);
+    font-size: 1.2rem;
+    transition: all .5 linear;
+}
+form button:hover{
+    color: #1B9CFC;
+    background-color: var(--atc);
+    box-shadow: 0 0 3px 2px #1B9CFC;
+}
+form p{
+    color: var(--atc);
+    margin: 20px 0;
+}
+/*-----------------------------login end--------------------------------------*/
+/*-----------------------------900px display stard----------------------------*/
+@media (max-width:900px){
+    
+    .NEV_BTN{
+        display: flex;
+    }
+    .nev{
+        position: absolute;
+        left: 0;
+        top: 80px;
+        display: none;
+        flex-direction: column;
+        z-index: 100;
+        width: 80vw;
+        height: 100vh;
+        background-color: #1B9CFC;
+    }
+    .nev a{
+        width: 100%;
+        padding: 25px 15px;
+
+    }
+    .nev.active{
+        display: flex;
+    }
+    .nev.active ~ a{
+        z-index: 100;
+    }
+    .LoginBox.active{
+        z-index: -1;
+    }
+}
+
+/*-----------------------------900px display end--------------------------------------*/
